@@ -125,13 +125,19 @@ let compare = function (playerChoice, computerChoice) {
                 messageTarget.innerHTML = "Player loses :(";
             }
             break;
-
-
-
-
     }
+
 
     /*if (playerChoice === computerChoice) {
         alert("The result is a tie! Try again.");
     }*/
+}
+
+// Restart the game
+function clearMessage(event) {
+    event.preventDefault();  // Stops the page from refreshing
+    let screen = document.getElementById("reset");
+    messageTarget.innerHTML = '';
+    playerTarget.innerHTML = '';
+    computerTarget.innerHTML = '';
 }
